@@ -1,0 +1,24 @@
+spring:
+  datasource:
+    url: jdbc:mysql://address=(protocol=tcp)(host=2001:da8:270:2020:f816:3eff:fe88:db99)(port=3306)/hardware?useUnicode=true&characterEncoding=UTF-8
+    username: root
+    password:
+    driver-class-name: com.mysql.jdbc.Driver
+
+
+mybatis:
+  mapper-locations: classpath:mapper/*Mapper.xml
+
+
+
+pagehelper:
+  helperDialect: mysql
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+server:
+  port: 8080
+  tomcat:
+    max-http-form-post-size: 8192

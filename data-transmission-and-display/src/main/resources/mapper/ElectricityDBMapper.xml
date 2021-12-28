@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.edu.mapper.ElectricityDBMapper">
+    <select id="getNewData" resultType="com.edu.entity.ElectricityDB">
+        select * from electricityDB where epc = 'A103F2202108250000000001' order by createtime desc limit 1
+    </select>
+    <select id="getElectrityDBList" resultType="com.edu.entity.ElectricityDB">
+        select * from electricityDB where epc = 'A103F2202108250000000001' order by createtime desc limit 5
+    </select>
+</mapper>
